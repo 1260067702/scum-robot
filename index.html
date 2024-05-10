@@ -1,0 +1,63 @@
+<!--
+ * @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
+ * @Date: 2023-11-11 18:20:23
+ * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
+ * @LastEditTime: 2023-11-13 12:56:36
+ * @FilePath: \electron-sample\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <!-- <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"> -->
+  <link href="./css/styles.css" rel="stylesheet">
+  <!-- <title>SCUM管理机器人</title> -->
+  <!-- 引入样式 -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
+  <!-- 引入组件库 -->
+
+</head>
+
+<body>
+  <div id="app">
+    <div class="status">
+      <img :src="image" alt="">
+      <div>
+        <h3>状态：{{status}}</h3>
+        <h3>模式：{{tp}}</h3>
+      </div>
+    </div>
+    <div id="inputs" v-if="flag">
+      KEY：
+      <input type="password" placeholder="请输入密钥" v-model="key">
+      <input type="button" value="连接服务器" @click="bind" class="btn">
+    </div>
+    <div class="list" ref="mianscroll">
+      <p v-for="(item,index) in codeList">{{item}}</p>
+    </div>
+    <div>
+      <h5>版本：{{version}}</h5>
+    </div>
+  </div>
+
+  <!-- You can also require other files to run in this process -->
+  <script type="module">
+    import { createApp } from './js/vue.esm-browser.js'
+    console.log(createApp);
+    window.createApp = createApp
+
+  </script>
+  <script src="./js/init.js"></script>
+  <script src="./js/renderer.js"></script>
+  <!-- <script src="./js/vue.esm-browser.js"></script> -->
+</body>
+
+<style>
+
+</style>
+
+</html>

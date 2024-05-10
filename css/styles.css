@@ -1,0 +1,83 @@
+p{
+    display: block;
+    width: 100%;
+    word-break:break-word;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+
+  .list {
+    width: 95%;
+    height: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* background-color: rgb(155, 155, 155); */
+    box-shadow: inset 0px 0px 2px 2px #475669;
+    display: flex;
+    flex-flow: column;
+  }
+
+  /* 滚动条整体 整体如果不设置，只设置滑块和轨道是没有效果的 */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px; 
+    border-radius: 10px;
+    /* margin-left: 20px; */
+  }
+  /* height对于纵向滚动条来说没有用，但是对于横向就有用了 */
+
+   /* 滑块 */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #b81eff;
+     /* height: 50px; // 整体设了宽高后，这里宽高是无效的 */
+    /* width: 50px;  */
+  }
+
+   /* 轨道 */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #3d3a3a;
+  }
+
+  #inputs {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .btn {
+    margin-left: 20px;
+    padding: 5px;
+  }
+
+  .el-carousel__item h3 {
+    color: #475669;
+    font-size: 18px;
+    opacity: 0.75;
+    line-height: 300px;
+    margin: 0;
+  }
+
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+
+  .el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+  }
+
+  img {
+    width: 370px;
+  }
+
+  .status>div {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .status>div>h3 {
+    width: 100%;
+  }

@@ -1,0 +1,45 @@
+{
+  "name": "electron-robot",
+  "version": "1.0.0",
+  "description": "auto robot",
+  "main": "main.js",
+  "author": {
+    "name": "Zero 零",
+    "email": "1260067702@qq.com",
+    "url": "http://if9.cc"
+  },
+  "scripts": {
+    "pretest": "electron-rebuild",
+    "test": "electron .",
+    "make": "electron-builder --win --x64"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@nut-tree/nl-matcher-darwin": "^1.0.1-next.20211202095927",
+    "@nut-tree/nut-js": "2.0.0",
+    "@nut-tree/template-matcher": "^1.0.0",
+    "axios": "^1.6.1",
+    "iconv-lite": "^0.6.3",
+    "socket.io-client": "^4.7.2"
+  },
+  "devDependencies": {
+    "electron": "^13.0.0",
+    "electron-builder": "^24.6.4",
+    "electron-rebuild": "^3.2.9",
+    "jest": "^26.6.3"
+  },
+  "build": {
+    "productName": "Z0机器人",
+    "appId": "com.0gkg.robot.zero",
+    "icon": "./image/icon.png",
+    "directories": {
+      "output": "../build"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "dmg": {
+      "backgroundColor": "#fff"
+    }
+  }
+}
